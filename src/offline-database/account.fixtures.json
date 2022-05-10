@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Gmail",
+    "password": "1234",
+    "username": "johndoe@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Facebook",
+    "password": "1234",
+    "username": "johndoe@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Twitter",
+    "password": "1234",
+    "username": "johndoe@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "Linkedin",
+    "password": "1234",
+    "username": "johndoe@gmail.com"
+  },
+  {
+    "id": 5,
+    "name": "Whatsapp",
+    "password": "1234",
+    "username": "johndoe@gmail.com"
+  },
+  {
+    "id": 6,
+    "name": "Instagram",
+    "password": "1234",
+    "username": "johndoe@gmail.com"
+  }
+]
