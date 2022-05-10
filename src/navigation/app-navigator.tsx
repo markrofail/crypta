@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeScreen} from '../screens/home/home-screen';
+import { AccountListScreen } from '../screens/account-list/account-list-screen';
 
 
 /**
@@ -14,7 +14,8 @@ import {HomeScreen} from '../screens/home/home-screen';
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type NavigatorParamList = {
-    'home': undefined
+    'account-list': undefined
+    'account-details': undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -23,13 +24,13 @@ const Stack = createNativeStackNavigator<NavigatorParamList>();
 export const AppStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName='home'
+      initialRouteName='account-list'
       screenOptions={{
         headerShown: false,
         animation: 'slide_from_right',
       }}
     >
-      <Stack.Screen name="home" component={HomeScreen} />
+      <Stack.Screen name="account-list" component={AccountListScreen} />
     </Stack.Navigator>
   );
 };
