@@ -5,7 +5,7 @@ import { View, StyleSheet } from "react-native";
 import { color, spacing } from "../../../theme";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useDispatch } from "react-redux";
-import { signIn } from "../../../redux/slices/authSlice";
+import { signIn } from "../../../redux/slices/auth.slice";
 import { NavigatorParamList } from "../../../navigation/auth-navigator";
 
 type Props = NativeStackScreenProps<NavigatorParamList, "login">;
