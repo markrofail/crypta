@@ -1,11 +1,10 @@
 module.exports = {
   'env': {
-    'es2021': true,
-    'node': true,
+    "react-native/react-native": true,
   },
-  'extends': [
-    'plugin:react/recommended',
-    'google',
+  "extends": [
+    "@react-native-community",
+    "prettier",
   ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
@@ -15,10 +14,7 @@ module.exports = {
     'ecmaVersion': 'latest',
     'sourceType': 'module',
   },
-  'plugins': [
-    'react',
-    '@typescript-eslint',
-  ],
+  "plugins": ["react", "react-native", 'prettier', '@typescript-eslint'],
   'rules': {
     "max-len": ["error", { "code": 120 }],
   },

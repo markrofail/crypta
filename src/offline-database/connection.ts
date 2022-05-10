@@ -1,7 +1,7 @@
-import { Connection, createConnection } from "typeorm"
+import { Connection, createConnection } from "typeorm";
 
-import { Account } from "./account.model"
-import { CreateAccountsTable1650436810884 } from "./migrations"
+import { Account } from "./account.model";
+import { CreateAccountsTable1650436810884 } from "./migrations";
 
 export const initConnection = async (): Promise<Connection> => {
   return await createConnection({
@@ -10,14 +10,10 @@ export const initConnection = async (): Promise<Connection> => {
     driver: require("expo-sqlite"),
     logging: true,
 
-    entities: [
-      Account,
-    ],
+    entities: [Account],
     synchronize: false,
 
-    migrations: [
-      CreateAccountsTable1650436810884,
-    ],
+    migrations: [CreateAccountsTable1650436810884],
     migrationsRun: true,
-  })
-}
+  });
+};

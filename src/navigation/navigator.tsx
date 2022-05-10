@@ -1,13 +1,17 @@
-import React, {FC} from 'react';
-import {AppStack} from './app-navigator';
-import {AuthStack} from './auth-navigator';
-import {useSelector} from 'react-redux';
-import {RootState} from '../redux/store';
-import {useColorScheme} from 'react-native';
-import {NavigationContainer, DefaultTheme, DarkTheme} from '@react-navigation/native';
+import React, { FC } from "react";
+import { AppStack } from "./app-navigator";
+import { AuthStack } from "./auth-navigator";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { useColorScheme } from "react-native";
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from "@react-navigation/native";
 
-
-interface NavigationProps extends Partial<React.ComponentProps<typeof NavigationContainer>> { }
+interface NavigationProps
+  extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
 
 export const AppNavigator: FC<NavigationProps> = (props) => {
   const colorScheme = useColorScheme();
@@ -16,7 +20,7 @@ export const AppNavigator: FC<NavigationProps> = (props) => {
 
   return (
     <NavigationContainer
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
+      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
       {...props}
     >
       {isLoggedIn ? <AppStack /> : <AuthStack />}

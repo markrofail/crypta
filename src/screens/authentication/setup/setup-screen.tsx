@@ -1,12 +1,12 @@
-import React, {FC} from 'react';
-import {Logo} from '../../../components';
-import {Headline, Paragraph, Button} from 'react-native-paper';
-import {View, StyleSheet} from 'react-native';
-import {color, spacing} from '../../../theme';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {NavigatorParamList} from '../../../navigation/auth-navigator';
+import React, { FC } from "react";
+import { Logo } from "../../../components";
+import { Headline, Paragraph, Button } from "react-native-paper";
+import { View, StyleSheet } from "react-native";
+import { color, spacing } from "../../../theme";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { NavigatorParamList } from "../../../navigation/auth-navigator";
 
-type Props = NativeStackScreenProps<NavigatorParamList, 'setup'>
+type Props = NativeStackScreenProps<NavigatorParamList, "setup">;
 
 export const SetupScreen: FC<Props> = () => {
   return (
@@ -14,53 +14,52 @@ export const SetupScreen: FC<Props> = () => {
       <Logo />
       <Headline>Password Vault</Headline>
       <Paragraph style={styles.paragraph}>
-                Your data is yours, ... yours alone.
+        Your data is yours, ... yours alone.
       </Paragraph>
       <Button
         style={styles.button}
         labelStyle={styles.loginButtonText}
         mode="contained"
-        onPress={() => { }}
+        onPress={() => {}}
       >
-                Login
+        Login
       </Button>
       <Button
         style={styles.button}
         labelStyle={styles.signupButtonText}
         mode="outlined"
-        onPress={() => { }}
+        onPress={() => {}}
       >
-                Sign Up
+        Sign Up
       </Button>
     </View>
   );
 };
 
-
 const styles = StyleSheet.create({
   root: {
     flex: 1,
     padding: 20,
-    width: '100%',
+    width: "100%",
     maxWidth: 340,
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paragraph: {
     color: color.dim,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: spacing.medium,
   },
   button: {
-    width: '100%',
+    width: "100%",
     marginVertical: spacing.small,
   },
   signupButtonText: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   loginButtonText: {
     color: color.palette.white,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

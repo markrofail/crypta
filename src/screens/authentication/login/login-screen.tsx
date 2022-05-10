@@ -1,23 +1,22 @@
-import React, {FC} from 'react';
-import {Logo} from '../../../components';
-import {Headline, Paragraph, Button} from 'react-native-paper';
-import {View, StyleSheet} from 'react-native';
-import {color, spacing} from '../../../theme';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {useDispatch} from 'react-redux';
-import {signIn} from '../../../redux/slices/authSlice';
-import {NavigatorParamList} from '../../../navigation/auth-navigator';
+import React, { FC } from "react";
+import { Logo } from "../../../components";
+import { Headline, Paragraph, Button } from "react-native-paper";
+import { View, StyleSheet } from "react-native";
+import { color, spacing } from "../../../theme";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../../redux/slices/authSlice";
+import { NavigatorParamList } from "../../../navigation/auth-navigator";
 
-type Props = NativeStackScreenProps<NavigatorParamList, 'login'>
-
+type Props = NativeStackScreenProps<NavigatorParamList, "login">;
 
 export const LoginScreen: FC<Props> = () => {
   const dispatch = useDispatch();
 
   const handleLogin = () => {
     const credentials = {
-      email: 'jdoe@test.com',
-      userName: 'johnDoe',
+      email: "jdoe@test.com",
+      userName: "johnDoe",
     };
 
     dispatch(signIn(credentials));
@@ -29,53 +28,53 @@ export const LoginScreen: FC<Props> = () => {
       <Headline>Password Vault</Headline>
 
       <Paragraph style={styles.paragraph}>
-                Your data is yours, ... yours alone.
+        Your data is yours, ... yours alone.
       </Paragraph>
 
       <Button
         style={styles.button}
         labelStyle={styles.loginButtonText}
         mode="contained"
-        onPress={handleLogin}>
-                Login
+        onPress={handleLogin}
+      >
+        Login
       </Button>
       <Button
         style={styles.button}
         labelStyle={styles.signupButtonText}
         mode="outlined"
-        onPress={() => { }}
+        onPress={() => {}}
       >
-                Sign Up
+        Sign Up
       </Button>
     </View>
   );
 };
 
-
 const styles = StyleSheet.create({
   root: {
     flex: 1,
     padding: 20,
-    width: '100%',
+    width: "100%",
     maxWidth: 340,
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paragraph: {
     color: color.dim,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: spacing.medium,
   },
   button: {
-    width: '100%',
+    width: "100%",
     marginVertical: spacing.small,
   },
   signupButtonText: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   loginButtonText: {
     color: color.palette.white,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

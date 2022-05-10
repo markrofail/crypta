@@ -1,13 +1,12 @@
-import React, {FC} from 'react';
-import {Image, StyleSheet} from 'react-native';
+import React, { FC } from "react";
+import { Image, StyleSheet } from "react-native";
 
-interface Props {
-}
+interface Props {}
 
 export const Logo: FC<Props> = () => {
   return (
     <Image
-      source={require('../../../assets/images/logo.png')}
+      source={require("../../../assets/images/logo.png")}
       style={styles.image}
     />
   );

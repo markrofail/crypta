@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm"
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateAccountsTable1650436810884 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -19,11 +19,11 @@ export class CreateAccountsTable1650436810884 implements MigrationInterface {
           { name: "created_at", type: "datetime" },
           { name: "updated_at", type: "datetime" },
         ],
-      }),
-    )
+      })
+    );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable("accounts")
+    await queryRunner.dropTable("accounts");
   }
 }
